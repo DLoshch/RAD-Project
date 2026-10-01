@@ -17,6 +17,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Vector2 lookInput;
 
+    public GameObject bulletPrefab;
+    public GameObject firePoint;
+    public Animator animator;
+
     void Start()
     {
         playerInputs = new PlayerInputs();
@@ -29,6 +33,7 @@ public class PlayerController : MonoBehaviour
         playerInputs.Player.Move.canceled += ctx => moveInput = Vector2.zero;
         playerInputs.Player.Look.performed += ctx => lookInput = ctx.ReadValue<Vector2>();
         playerInputs.Player.Look.canceled += ctx => lookInput = Vector2.zero;
+        playerInputs.Player.LMB.performed += ctx => Click();
     }
 
     void Update()
@@ -60,5 +65,12 @@ public class PlayerController : MonoBehaviour
     public void InteractRaycast()
     {
         Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit hit, 3f);
+    }
+
+    public void Click()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.transform.position, firePoint.transform.rotation);
+        animator.SetTrigger("Fire");
+        Debug.Log("Fire");
     }
 }
