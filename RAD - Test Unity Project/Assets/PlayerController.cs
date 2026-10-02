@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
     public void Click()
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.transform.position, firePoint.transform.rotation);
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.transform.position, playerCamera.transform.rotation);
         animator.SetTrigger("Fire");
         Debug.Log("Fire");
     }
