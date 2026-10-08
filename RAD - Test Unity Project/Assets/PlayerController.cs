@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
         playerInputs.Player.Enable();
         
 
+
         playerInputs.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
         playerInputs.Player.Move.canceled += ctx => moveInput = Vector2.zero;
         playerInputs.Player.Look.performed += ctx => lookInput = ctx.ReadValue<Vector2>();
@@ -39,7 +40,10 @@ public class PlayerController : MonoBehaviour
     {
         Look();
         Move();
+<<<<<<< HEAD
+=======
         InteractRaycast();
+>>>>>>> 2a5537990277d9f569a2c2d07bc614b8ad3215ac
     }
 
     public void Move()
@@ -67,12 +71,23 @@ public class PlayerController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(playerCamera.transform.position, playerCamera.transform.forward, 100f);
         if (hit.collider != null)
         {
+<<<<<<< HEAD
+            if (hit.collider.gameObject.GetComponent<EnemyMovement>())
+            {
+                Destroy(hit.collider.gameObject);
+            }
+=======
             Debug.Log(hit.collider.gameObject.name);
+>>>>>>> 2a5537990277d9f569a2c2d07bc614b8ad3215ac
         }
     }
 
     public void Click()
     {
+<<<<<<< HEAD
+        InteractRaycast();
+=======
+>>>>>>> 2a5537990277d9f569a2c2d07bc614b8ad3215ac
         fireEffect.GetComponent<ParticleSystem>().Play();
         animator.SetTrigger("Fire");
     }

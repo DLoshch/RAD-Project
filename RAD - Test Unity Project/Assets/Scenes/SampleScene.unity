@@ -989,6 +989,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1107529782}
+  - {fileID: 2012586114}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &366162208 stripped
@@ -1871,6 +1872,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6e0f5bc130da5e40918e5fd99c175cc, type: 3}
+<<<<<<< HEAD
+=======
 --- !u!1 &562456104
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,6 +2188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06dff6918caaf824698304c29d4a9e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
+>>>>>>> 2a5537990277d9f569a2c2d07bc614b8ad3215ac
 --- !u!4 &582278674 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4902502665915776525, guid: c6e0f5bc130da5e40918e5fd99c175cc, type: 3}
@@ -4705,7 +4709,11 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< HEAD
+  m_IsActive: 0
+=======
   m_IsActive: 1
+>>>>>>> 2a5537990277d9f569a2c2d07bc614b8ad3215ac
 --- !u!64 &1361172979
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4794,8 +4802,13 @@ Transform:
   m_GameObject: {fileID: 1361172978}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+<<<<<<< HEAD
+  m_LocalPosition: {x: -0.02, y: 3.42, z: -11.17}
+  m_LocalScale: {x: 3, y: 3, z: 1.5}
+=======
   m_LocalPosition: {x: -0.02, y: 3.42, z: -5.69404}
   m_LocalScale: {x: 3.2009, y: 3.2009, z: 3.2009}
+>>>>>>> 2a5537990277d9f569a2c2d07bc614b8ad3215ac
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -5648,6 +5661,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577124543}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
+=======
 --- !u!1 &1604132645
 GameObject:
   m_ObjectHideFlags: 0
@@ -5947,6 +5962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06dff6918caaf824698304c29d4a9e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Billboard
+>>>>>>> 2a5537990277d9f569a2c2d07bc614b8ad3215ac
 --- !u!4 &1606355874 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4902502665915776525, guid: c6e0f5bc130da5e40918e5fd99c175cc, type: 3}
@@ -12134,6 +12150,58 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 250661876890251221, guid: 08e9fd747b7403047b2e5df996edbfd8, type: 3}
   m_PrefabInstance: {fileID: 1102476525}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+--- !u!1 &2012586113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2012586114}
+  - component: {fileID: 2012586115}
+  m_Layer: 0
+  m_Name: Enemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2012586114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012586113}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3, y: 6.67, z: -2.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 357623886}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2012586115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012586113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705c8c725bdccb74f9d4b1ad45abb4bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
+  spawnRate: 0.5
+  spawnTimer: 0
+  enemy: {fileID: 1991678724719494174, guid: 5301a4364a92f2748b9228a7c8d9b9f7, type: 3}
+  spawnRangeY: 6
+  spawnRangeX: 10
+=======
+>>>>>>> 2a5537990277d9f569a2c2d07bc614b8ad3215ac
 --- !u!4 &2025204873 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 250661876890251221, guid: 08e9fd747b7403047b2e5df996edbfd8, type: 3}
@@ -12923,10 +12991,16 @@ SceneRoots:
   - {fileID: 785596391}
   - {fileID: 420517623}
   - {fileID: 96332306}
+<<<<<<< HEAD
+  - {fileID: 743766892}
+  - {fileID: 1540379243}
+  - {fileID: 382694351}
+=======
   - {fileID: 562456106}
   - {fileID: 743766892}
   - {fileID: 1540379243}
   - {fileID: 382694351}
   - {fileID: 1604132647}
+>>>>>>> 2a5537990277d9f569a2c2d07bc614b8ad3215ac
   - {fileID: 209415721}
   - {fileID: 1361172982}
