@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Vector2 lookInput;
 
-    public GameObject bulletPrefab;
+    public GameObject fireEffect;
     public GameObject firePoint;
     public Animator animator;
 
@@ -26,8 +26,7 @@ public class PlayerController : MonoBehaviour
         playerInputs = new PlayerInputs();
         playerInputs.Enable();
         playerInputs.Player.Enable();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        
 
         playerInputs.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
         playerInputs.Player.Move.canceled += ctx => moveInput = Vector2.zero;
@@ -39,6 +38,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Look();
+        Move();
+        InteractRaycast();
     }
 
     public void Move()
@@ -63,13 +64,16 @@ public class PlayerController : MonoBehaviour
 
     public void InteractRaycast()
     {
-        Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit hit, 3f);
+        RaycastHit2D hit = Physics2D.Raycast(playerCamera.transform.position, playerCamera.transform.forward, 100f);
+        if (hit.collider != null)
+        {
+            Debug.Log(hit.collider.gameObject.name);
+        }
     }
 
     public void Click()
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.transform.position, playerCamera.transform.rotation);
+        fireEffect.GetComponent<ParticleSystem>().Play();
         animator.SetTrigger("Fire");
-        Debug.Log("Fire");
     }
 }
